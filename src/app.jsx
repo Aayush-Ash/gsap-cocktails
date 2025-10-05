@@ -9,9 +9,10 @@ import React from 'react'
 
 const App = () => {
     return (
-        <main className="App">
+        <main>
             <Navbar/>
             <Hero/>
+            <div className="h-dvh bg-black"/>
         </main>
     )
 }
