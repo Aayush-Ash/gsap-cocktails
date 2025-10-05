@@ -174,7 +174,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 - Author: Aayush Ash  
 - GitHub: [Aayush-Ash](https://github.com/Aayush-Ash)  
-- (Optional) Email: you@example.com  
+- Email: kashyapaayush3331@gmail.com  
 
 ---
 
