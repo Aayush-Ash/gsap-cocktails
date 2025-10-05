@@ -1,12 +1,185 @@
-# React + Vite
+# GSAP Cocktails 🍹
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+[![Stars](https://img.shields.io/github/stars/Aayush-Ash/gsap-cocktails?style=social)]()
 
-Currently, two official plugins are available:
+> A fun, animated cocktail menu built with GSAP and modern web tools.  
+> Mix & match drinks, animations, and transitions — all in the browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🎥 Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Check out the live demo or view the animation in action:
+
+![demo-gif](./assets/demo.gif)  
+Live Demo: `https://your-demo-link.com` *(replace with actual URL)*
+
+---
+
+## ✨ Features
+
+- ✅ Smooth animations & transitions using **GSAP**  
+- ✅ Interactive drink selection & animations  
+- ✅ Modular code structure (components, constants)  
+- ✅ Responsive & performant  
+- ✅ Easy to extend with new cocktails, animations, themes  
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology               |
+|--------------|---------------------------|
+| UI / Anim    | HTML, CSS, JavaScript     |
+| Animation    | GSAP (GreenSock)          |
+| Build Tool   | Vite                      |
+| Linting      | ESLint                    |
+| Hosting      | Static / SPA ready        |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14+)  
+- npm or yarn  
+
+### Installation & Running Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/Aayush-Ash/gsap-cocktails.git
+cd gsap-cocktails
+
+# Install dependencies
+npm install       # or `yarn`
+
+# Start development server
+npm run dev       # or `yarn dev`
+
+# Build for production
+npm run build
+```
+
+---
+
+## 🧩 Usage & Examples
+
+Here’s a minimal usage example (if applicable):
+
+```html
+<div id="cocktail-menu"></div>
+<script type="module">
+  import { initMenu } from './src/index.js';
+
+  initMenu({
+    container: document.getElementById('cocktail-menu'),
+    drinks: [
+      { name: 'Mojito', color: '#a8e6cf' },
+      { name: 'Cosmopolitan', color: '#ff8b94' },
+    ]
+  });
+</script>
+```
+
+*(Adapt based on how your module/API is structured.)*
+
+---
+
+## ⚙️ Configuration & Customization
+
+- **/constants**: define drink names, colors, animation durations  
+- **/src**: core logic, animations, UI components  
+- **CSS / styling**: override or extend themes & styles  
+- **Vite config**: for path aliases, build tweaks  
+
+Feel free to add new drinks or animation variations by editing the constants and hooking into the animation engine.
+
+---
+
+## 🧪 Testing & Quality
+
+- Run linters & formatters:  
+  ```bash
+  npm run lint
+  npm run format
+  ```
+
+- (Optional) Add unit tests or snapshot tests with your favorite test runner (e.g. Jest, Vitest).
+
+---
+
+## 🔁 CI / Deployment
+
+If you set up GitHub Actions or similar CI, consider:
+
+- Lint & test on PR  
+- Auto-deploy to GitHub Pages / Netlify / Vercel  
+- Version bump & release tagging  
+
+Here’s a sample stub for `.github/workflows/ci.yml`:
+
+```yaml
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+```
+
+---
+
+## 🛠️ Roadmap
+
+- Add more cocktail animations & variants  
+- Theme / color customization  
+- Export animations as GIF / video  
+- Mobile / touch optimization  
+- Accessibility enhancements  
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!  
+1. Fork the repository  
+2. Create your feature branch: `git checkout -b feature/foo`  
+3. Commit your changes: `git commit -m "Add foo"`  
+4. Push to the branch: `git push origin feature/foo`  
+5. Open a Pull Request  
+
+Please follow the code style and ensure lint checks pass before submitting.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📬 Contact
+
+- Author: Aayush Ash  
+- GitHub: [Aayush-Ash](https://github.com/Aayush-Ash)  
+- (Optional) Email: you@example.com  
+
+---
+
+## 🙏 Acknowledgements
+
+- GSAP — for its powerful animation engine  
+- Vite & the frontend ecosystem  
+- Open source libraries & inspirations  
