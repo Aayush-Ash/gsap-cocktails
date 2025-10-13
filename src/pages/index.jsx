@@ -1,11 +1,11 @@
-import Home from "./Home";
-import GsapTo from "./GsapTo";
-import GsapFrom from "./GsapFrom";
-import GsapFromTo from "./GsapFromTo";
-import GsapStagger from "./GsapStagger";
-import GsapTimeline from "./GsapTimeline";
-import GsapScrollTrigger from "./GsapScrollTrigger";
-import GsapText from "./GsapText";
+import Home from "./Home.jsx";
+import GsapTo from "./GsapTo.jsx";
+import GsapFrom from "./GsapFrom.jsx";
+import GsapFromTo from "./GsapFromTo.jsx";
+import GsapStagger from "./GsapStagger.jsx";
+import GsapTimeline from "./GsapTimeline.jsx";
+import GsapScrollTrigger from "./GsapScrollTrigger.jsx";
+import GsapText from "./GsapText.jsx";
 
 export {
   GsapTo,

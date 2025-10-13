@@ -1,32 +1,39 @@
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const GsapScrollTrigger = () => {
-  // TODO: Implement the gsap scroll trigger
+  const scrollRef = useRef(null);
+
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray(scrollRef.current.children);
+
+    boxes.forEach((box) => {
+      gsap.to(box, {
+        x: 300,
+        rotation: 360,
+        borderRadius: "100%",
+        scale: 1.5,
+        scrollTrigger: {
+          trigger: box,       // each box triggers its own animation
+          start: "top 80%",   // when top of box hits 80% viewport
+          end: "top 30%",     // when top reaches 30% viewport
+          scrub: true,        // smooth scrubbing effect
+          markers: true       // enable markers for debugging
+        }
+      });
+    });
+  }, []);
 
   return (
     <main>
       <h1>GsapScrollTrigger</h1>
 
       <p className="mt-5 text-gray-500">
-        Gsap Scroll Trigger is a plugin that allows you to create animations
-        that are triggered by the scroll position of the page.
-      </p>
-
-      <p className="mt-5 text-gray-500">
-        With ScrollTrigger, you can define various actions to be triggered at
-        specific scroll points, such as starting or ending an animation,
-        scrubbing through animations as the user scrolls, pinning elements to
-        the screen, and more.{" "}
-      </p>
-
-      <p className="mt-5 text-gray-500">
-        Read more about the{" "}
-        <a
-          href="https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-        >
-          gsap scroll trigger
-        </a>{" "}
-        method.
+        Scroll down to see the animation triggered by GSAP ScrollTrigger.
       </p>
 
       <div className="w-full h-[70vh] flex justify-center items-center flex-col">
@@ -51,15 +58,10 @@ const GsapScrollTrigger = () => {
         </svg>
       </div>
 
-      <div className="mt-20 w-full h-screen">
-        <div
-          id="scroll-pink"
-          className="scroll-box w-20 h-20 rounded-lg bg-pink-500"
-        />
-        <div
-          id="scroll-orange"
-          className="scroll-box w-20 h-20 rounded-lg bg-orange-500"
-        />
+      <div className="mt-20 w-full h-screen flex flex-col gap-10 items-center" ref={scrollRef}>
+        <div className="scroll-box w-20 h-20 rounded-lg bg-pink-500" />
+        <div className="scroll-box w-20 h-20 rounded-lg bg-orange-500" />
+        <div className="scroll-box w-20 h-20 rounded-lg bg-green-500" />
       </div>
     </main>
   );
