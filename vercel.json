@@ -2,10 +2,5 @@
   "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "npm ci --prefer-offline --no-audit",
-  "functions": {
-    "src/**/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "installCommand": "npm ci --prefer-offline --no-audit"
 }
