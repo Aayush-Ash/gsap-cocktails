@@ -2,5 +2,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "npm install"
+  "installCommand": "rm -rf node_modules package-lock.json && npm install",
+  "functions": {
+    "src/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }

@@ -1,22 +1,20 @@
 {
-  "name": "gsap-cc-starter",
+  "name": "jsm_gsap_landing",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@tailwindcss/postcss": "^4.1.16",
     "gsap": "^3.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-responsive": "^10.0.1",
-    "react-router-dom": "^6.22.3"
+    "react-responsive": "^10.0.1"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -32,6 +30,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.1.4"
+    "vite": "^5.4.21"
   }
 }
