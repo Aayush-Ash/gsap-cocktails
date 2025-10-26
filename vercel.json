@@ -1,8 +1,8 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "installCommand": "rm -rf node_modules package-lock.json && npm install",
+  "installCommand": "npm ci --prefer-offline --no-audit",
   "functions": {
     "src/**/*.js": {
       "runtime": "nodejs18.x"
